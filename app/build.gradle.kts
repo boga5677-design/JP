@@ -9,7 +9,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.petlingo.learning"
+        applicationId = "com.nihongogo.learning"
         minSdk = 26
         targetSdk = 35
         versionCode = 30
@@ -21,10 +21,11 @@ android {
 
     signingConfigs {
         create("stableUpdate") {
-            storeFile = rootProject.file("signing/petlingo-update.jks")
-            storePassword = "android"
-            keyAlias = "androiddebugkey"
-            keyPassword = "android"
+            // Nihongo Go uses its own signing key so it is a separate app from PetLingo.
+            storeFile = rootProject.file("signing/nihongo-go-update.jks")
+            storePassword = "nihongogo2026"
+            keyAlias = "nihongogo"
+            keyPassword = "nihongogo2026"
         }
     }
 
